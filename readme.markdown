@@ -1,10 +1,12 @@
-# coffeeify
+# coffeeify-redux
 
-browserify v2 plugin for coffee-script
+browserify v2 plugin for coffee-script-redux
 
 mix and match `.coffee` and `.js` files in the same project
 
-[![build status](https://secure.travis-ci.org/substack/coffeeify.png)](http://travis-ci.org/substack/coffeeify)
+if you prefer the original coffee-script compiler, please use the [original coffeeify](https://github.com/substack/coffeeify)
+
+[![build status](https://secure.travis-ci.org/thlorenz/coffeeify-redux.png)](http://travis-ci.org/substack/coffeeify)
 
 # example
 
@@ -53,8 +55,3 @@ npm install coffeeify
 # license
 
 MIT
-
-# maintainers wanted
-
-I am not a coffee-script user so if you use this plugin regularly and want to
-take it over I will gladly add you as a maintainer on npm.
