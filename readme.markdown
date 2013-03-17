@@ -49,7 +49,7 @@ $ node bundle.js
 With [npm](https://npmjs.org) do:
 
 ```
-npm install coffeeify
+npm install coffeeify-redux
 ```
 
 # license

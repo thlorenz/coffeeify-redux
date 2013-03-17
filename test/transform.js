@@ -21,11 +21,10 @@ test('transform adds sourcemap comment', function (t) {
         t.deepEqual(
             sourceMap,
             { version: 3,
-              file: 'foo.js',
-              sourceRoot: '',
-              sources: [ 'foo.coffee' ],
+              source: file,
+              sources: [ file ],
               names: [],
-              mappings: ';AAAA;CAAA;CAAA,CAAA,CAAA,IAAO,GAAK;CAAZ',
+              mappings: 'AAAC;AAAA,OAAO,IAAP,CAAY,OAAA,CAAQ,UAAR,CAAZ,CAAA',
               sourcesContent: [ 'console.log(require \'./bar.js\')\n' ] },
             'adds sourcemap comment including original source'
       );

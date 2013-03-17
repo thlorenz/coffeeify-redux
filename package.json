@@ -5,8 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "through": "~2.2.0",
-    "convert-source-map": "~0.2.1",
-    "coffee-script-redux": "~2.0.0-beta4"
+    "coffee-script-redux": "~2.0.0-beta4",
+    "convert-source-map": "~0.2.1"
   },
   "devDependencies": {
     "tap": "~0.4.0",
