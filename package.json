@@ -1,5 +1,5 @@
 {
-  "name": "coffeeify",
+  "name": "coffeeify-redux",
   "version": "0.1.0",
   "description": "browserify v2 plugin to compile coffee-script automatically using the coffee-script-redux compiler",
   "main": "index.js",
