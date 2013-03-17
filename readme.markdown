@@ -1,12 +1,10 @@
-# coffeeify-redux
+# coffeeify-redux [![build status](https://secure.travis-ci.org/thlorenz/coffeeify-redux.png)](http://travis-ci.org/substack/coffeeify)
 
 browserify v2 plugin for coffee-script-redux
 
 mix and match `.coffee` and `.js` files in the same project
 
 if you prefer the original coffee-script compiler, please use the [original coffeeify](https://github.com/substack/coffeeify)
-
-[![build status](https://secure.travis-ci.org/thlorenz/coffeeify-redux.png)](http://travis-ci.org/substack/coffeeify)
 
 # example
 
