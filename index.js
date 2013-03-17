@@ -3,6 +3,15 @@ var CoffeeScript =  require('coffee-script-redux');
 var through      =  require('through');
 var convert      =  require('convert-source-map');
 
+function toProperSourcemap(sourcemap, file) {
+    // funny that toJSON actually returns an Object ;)
+    var obj = sourcemap.toJSON();
+    // also 'file' is not a version 3 property, but source is
+    obj.source = file;
+    delete obj.file;
+    return obj;
+}
+
 function compile(file, data) {
     var parsed = CoffeeScript.parse(data, {
         optimise: false
@@ -11,16 +20,11 @@ function compile(file, data) {
     });
 
     var ast = CoffeeScript.compile(parsed)
-      , sourceMap = CoffeeScript.sourceMap(ast, file, { compact: false })
+      , sourcemap = CoffeeScript.sourceMap(ast, file, { compact: false })
       , js = CoffeeScript.js(ast);
 
-    // funny that toJSON actually returns an Object ;)
-    var obj = sourceMap.toJSON();
-    // also 'file' is not a version 3 property, but source is
-    obj.source = file;
-    delete obj.file;
     var comment = convert
-        .fromObject(obj)
+        .fromObject(toProperSourcemap(sourcemap, file))
         .setProperty('sourcesContent', [ data ])
         .toComment();
 
